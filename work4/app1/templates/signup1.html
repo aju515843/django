@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css\b.css' %}">
+{% block body_block %}
+<h1>SignUp</h1><form method="post">
+{% csrf_token %}
+{{form}}
+<input type="submit" value="SignUp1"></form>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+{% block body_block %}
+<h1>Welcome to Home page</h1>
+{% if user.is_authenticated %}{{user.username}}
+{% else %}
+<p>visitor</p>
+{% endif %}
+{% endblock %}
+</body>
+</html>
